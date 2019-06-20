@@ -1,6 +1,6 @@
 # Default starter for Gridsome
 
-This is the project you get when you run `gridsome create new-project`.
+Demo project showing how to create relations between collections with Gridsome and NetlifyCMS
 
 ### 1. Install Gridsome CLI tool if you don't have
 
