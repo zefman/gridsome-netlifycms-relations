@@ -1,3 +1,4 @@
+# You will need to change this to point at your own repository
 backend:
   name: github
   repo: zefman/gridsome-netlifycms-relations

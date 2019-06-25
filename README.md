@@ -1,14 +1,25 @@
 # Default starter for Gridsome
 
-Demo project showing how to create relations between collections with Gridsome and NetlifyCMS
+Demo project showing how to create relations between collections with Gridsome and NetlifyCMS. 
 
-### 1. Install Gridsome CLI tool if you don't have
+See the blog post about it here: [Gridsome + NetlifyCMS Collection Relations](https://jozefm.dev/articles/2019/06/18/gridsome-netlify-cms-collection-relations)
 
-`npm install --global @gridsome/cli`
+## Running
 
-### 2. Create a Gridsome project
+```bash
+npm i
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+npm run develop
+```
+## 
+
+## Notes
+
+If you want to customise this for your own project, you will need to adjust the NetlifyCMS config in `src/admin/config.yml` to point to your own repository: 
+
+```yaml
+# You will need to change this to point at your own repository
+backend:
+  name: github
+  repo: zefman/gridsome-netlifycms-relations
+```
