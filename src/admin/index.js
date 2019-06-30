@@ -16,13 +16,7 @@ const IdControl = window.createClass({
         this.props.onChange(uuid());
     },  
     render: function() { 
-        return window.h('input', { 
-            type: 'text',
-            value: this.props.value,
-            readonly: true, 
-            class: 'id-input hidden', 
-            onChange: this.handleChange    
-        });  
+        return window.h('p', null, `${this.props.value}`);
     }
 });
 
@@ -30,9 +24,9 @@ const IdControl = window.createClass({
  * Create the preview widget, this will display the widgets value in the NetlifyCMS preview pane
  */
 const IdPreview = window.createClass({  
-    getInitialState: function() { return {}; }, 
+    getInitialState: function() { console.log(this.props); return {}; }, 
     render: function() { 
-        return window.h('p', null, `ID: TEST`);  
+        return window.h('p', null, `ID: ${this.props.value}`);  
     }
 });
 
