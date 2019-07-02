@@ -8,6 +8,8 @@
    
     <p>This is a demonstration of using Gridsome &amp; NetlifyCMS. You can see the code on Github <a href="https://github.com/zefman/gridsome-netlifycms-relations" target="_blank">here</a></p>
 
+    <p>A blog post explaining can be found <a href="https://jozefm.dev/articles/2019/06/18/gridsome-netlify-cms-collection-relations" target="_blank">here</a></p>
+
     <article v-for="edge in $page.posts.edges" :key="edge.node.id">
       <h2>{{ edge.node.title }}</h2>
       <div v-html="edge.node.content"></div>
