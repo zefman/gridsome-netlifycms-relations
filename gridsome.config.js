@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Gridsome + NetlifyCMS - Relations',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -18,17 +18,23 @@ module.exports = {
   },
 
   plugins: [
-    {
+    { 
       use: '@gridsome/source-filesystem',
-      options: {
-        path: 'posts/**/*.md',
-        typeName: 'Post',
-        remark: {
-          plugins: [
-            // ...local plugins
-          ]
-        }
-      }
+      options: { 
+        path: 'content/authors/*.md',
+        typeName: 'Author',
+      } 
+    },
+    { 
+      use: '@gridsome/source-filesystem',
+      options: { 
+        path: 'content/blog/*.md',
+        typeName: 'BlogPost',
+        route: '/blog/:year/:month/:day/:slug',
+        refs: { 
+          author: 'Author', 
+        } 
+      } 
     },
     {
       use: `gridsome-plugin-netlify-cms`,
